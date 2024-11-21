@@ -1,0 +1,138 @@
+/* Overall Layout */
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  height:100vh;
+  width:100vw;
+  background-color: #f9f9f9;
+}
+
+/* Header Styling */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Breadcrumb Styling */
+.breadcrumb {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px;
+}
+
+.breadcrumb span {
+  color: #555;
+}
+
+.breadcrumb .active {
+  color: #28a745; /* Green color for 'List of Topics' */
+  font-weight: bold;
+}
+
+/* Search Bar */
+.search-bar {
+  margin: 20px auto;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  background-color: white;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.filter-info {
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+/* Topics Container */
+.topics-container {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* Topics Grid */
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.topic-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff5e1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.topic-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.folder-icon {
+  color: #ffca28;
+  font-size: 20px;
+}
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.test-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* No Results Styling */
+.no-results {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #777;
+}
