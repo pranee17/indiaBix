@@ -1,10 +1,14 @@
 import React from "react";
-import { FooterContainer } from "../styles/FooterStyles";
+import { FooterContainer, FooterLink, Icon } from "../styles/styled-components";
 
-const Footer = () => (
-  <FooterContainer>
-    <a href="#">Take an Online Verbal Reasoning Test Now!</a>
-  </FooterContainer>
-);
+function Footer() {
+  return (
+    <FooterContainer>
+      <FooterLink href="#">
+        <Icon>⏰</Icon> Take an Online Verbal Reasoning Test Now!
+      </FooterLink>
+    </FooterContainer>
+  );
+}
 
 export default Footer;

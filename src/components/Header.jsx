@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderContainer } from "../styles/HeaderStyles";
+import { HeaderContainer } from "../styles/styled-components";
 
 const Header = () => (
   <HeaderContainer>

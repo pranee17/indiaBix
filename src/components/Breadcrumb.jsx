@@ -1,5 +1,5 @@
 import React from "react";
-import { BreadcrumbNav } from "../styles/BreadcrumbStyles";
+import { BreadcrumbNav } from "../styles/styled-components";
 
 const Breadcrumb = () => (
   <BreadcrumbNav>

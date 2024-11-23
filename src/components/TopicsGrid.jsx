@@ -1,5 +1,5 @@
 import React from "react";
-import { GridContainer, TopicItem } from "../styles/TopicsGridStyles";
+import { GridContainer, TopicItem } from "../styles/styled-components";
 
 const TopicsGrid = ({ topics }) => {
   if (topics.length === 0) {

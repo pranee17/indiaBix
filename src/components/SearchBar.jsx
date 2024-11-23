@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchContainer } from "../styles/SearchBarStyles";
+import { SearchContainer } from "../styles/styled-components";
 
 const SearchBar = ({ searchQuery, setSearchQuery, total, filtered }) => (
   <SearchContainer>

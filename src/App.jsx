@@ -4,6 +4,8 @@ import Breadcrumb from "./components/Breadcrumb";
 import SearchBar from "./components/SearchBar";
 import TopicsGrid from "./components/TopicsGrid";
 import Footer from "./components/Footer";
+import { MainComponent} from "./styles/styled-components";
+import { FilteredComponent } from "./styles/styled-components";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -32,10 +34,11 @@ function App() {
   );
 
   return (
-    <div style={{ fontFamily: "Arial, sans-serif", padding: "20px" }}>
+    <div>
+      <MainComponent>
       <Header />
       <Breadcrumb />
-      <div style={{ margin: "20px 0" }}>
+      <FilteredComponent>
         <SearchBar
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
@@ -43,8 +46,9 @@ function App() {
           filtered={filteredTopics.length}
         />
         <TopicsGrid topics={filteredTopics} />
-      </div>
+        </FilteredComponent>
       <Footer />
+      </MainComponent>
     </div>
   );
 }
