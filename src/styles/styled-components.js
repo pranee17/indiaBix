@@ -1,26 +1,5 @@
 import styled from "styled-components";
 
-export const BreadcrumbNav = styled.nav`
-  font-size: 14px;
-  color: #777;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  padding: 10px;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-
-  .active {
-    color: #28a745;
-    font-weight: bold;
-  }
-`;
-
 export const FooterContainer = styled.footer`
   text-align: center;
   margin-top: 20px;
@@ -31,7 +10,6 @@ export const FooterContainer = styled.footer`
     font-weight: bold;
   }
 `;
-
 
 export const HeaderContainer = styled.header`
   text-align: center;
@@ -69,7 +47,6 @@ export const SearchContainer = styled.div`
   }
 `;
 
-
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -102,22 +79,22 @@ export const TopicItem = styled.div`
 export const MainComponent = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  min-height: 100vh; 
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   padding: 20px;
-  background-color: #f7f8fa; 
-  color: #333; 
+  background-color: #f7f8fa;
+  color: #333;
   font-family: Arial, sans-serif;
 
   & > * {
     width: 100%;
-    max-width: 1200px; 
-    margin-bottom: 20px; 
+    max-width: 1200px;
+    margin-bottom: 20px;
   }
 
   @media (max-width: 768px) {
-    padding: 10px; 
+    padding: 10px;
   }
 `;
 
@@ -150,4 +127,42 @@ export const FooterLink = styled.a`
 export const Icon = styled.span`
   font-size: 20px;
   color: #28a745;
+`;
+
+export const BreadcrumbNav = styled.nav`
+  margin: 20px auto;
+  font-size: 16px;
+  color: #555;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .active {
+    font-weight: bold;
+    color: #28a745;
+  }
+  span {
+    margin: 0 5px;
+  }
+
+  span:last-child {
+    margin-right: 0;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
 `;

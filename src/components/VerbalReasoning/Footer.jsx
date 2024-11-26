@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterContainer, FooterLink, Icon } from "../styles/styled-components";
+import { FooterContainer, FooterLink, Icon } from "../../styles/styled-components";
 
 function Footer() {
   return (

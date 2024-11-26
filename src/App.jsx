@@ -1,55 +1,32 @@
-import React, { useState } from "react";
-import Header from "./components/Header";
-import Breadcrumb from "./components/Breadcrumb";
-import SearchBar from "./components/SearchBar";
-import TopicsGrid from "./components/TopicsGrid";
-import Footer from "./components/Footer";
-import { MainComponent} from "./styles/styled-components";
-import { FilteredComponent } from "./styles/styled-components";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { MainComponent } from "./styles/styled-components";
 
+import Header from "./components/VerbalReasoning/Header";
+import Footer from "./components/VerbalReasoning/Footer";
+import Home from "./components/VerbalReasoning/Home";
+import QuestionPageLogic from "./components/QuestionsPage/QuestionPage";
+import Breadcrumb from "./components/VerbalReasoning/Breadcrumb";
 function App() {
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const topics = [
-    "Logical Sequence of Words",
-    "Blood Relation Test",
-    "Syllogism",
-    "Series Completion",
-    "Cause and Effect",
-    "Dice",
-    "Venn Diagrams",
-    "Cube and Cuboid",
-    "Analogy",
-    "Seating Arrangement",
-    "Character Puzzles",
-    "Direction Sense Test",
-    "Classification",
-    "Data Sufficiency",
-    "Arithmetic Reasoning",
-    "Verification of Truth",
-  ];
-
-  const filteredTopics = topics.filter((topic) =>
-    topic.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
   return (
-    <div>
+    <Router>
       <MainComponent>
-      <Header />
-      <Breadcrumb />
-      <FilteredComponent>
-        <SearchBar
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          total={topics.length}
-          filtered={filteredTopics.length}
-        />
-        <TopicsGrid topics={filteredTopics} />
-        </FilteredComponent>
-      <Footer />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/logical-sequence"
+            element={
+              <>
+              <Breadcrumb/>
+                <QuestionPageLogic />
+              </>
+            }
+          />
+        </Routes>
+        <Footer />
       </MainComponent>
-    </div>
+    </Router>
   );
 }
 
