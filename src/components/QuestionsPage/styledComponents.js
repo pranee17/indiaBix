@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const DiscussionStyle = styled.div`
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   border-radius: 5px;
-
+   border: 1px solid #ddd;
+   padding:10px;
   .comment {
     margin-bottom: 10px;
     border-bottom: 1px solid #eee;
@@ -11,18 +12,19 @@ export const DiscussionStyle = styled.div`
 `;
 
 export const WorkspaceArea = styled.div`
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
 
   textarea {
-    width: 100%;
+    width: 95%;
     height: 200px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
+    margin-right:10px;
   }
 `;
 
@@ -118,8 +120,7 @@ export const PaginationWrapper = styled.div`
 export const SectionContainer = styled.div`
   margin: 20px 0;
   padding: 20px;
-  background: #f7f8fa;
- border: 1px solid #ddd;
+  background: #ffffff;
   border-radius: 5px;
 `;
 
@@ -156,7 +157,7 @@ export const QuestionBox = styled.div`
 export const ExplanationSection = styled.div`
   margin-top: 10px;
   padding: 17px;
-  background: #f9f9f9;
+  background: #ffffff;
   border: 1px solid #ccc;
   border-radius: 5px;
 `;
