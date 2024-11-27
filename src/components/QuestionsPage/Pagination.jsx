@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { questions } from "../../components/topics/LogicalSequence";
 import { ButtonContainer, PaginationWrapper } from "./styledComponents";
-import Breadcrumb from "../VerbalReasoning/Breadcrumb";
 
-const Pagination = ({ setCurrentPage, currentPage, questionsPerPage }) => {
+
+const Pagination = ({ setCurrentPage, currentPage, questionsPerPage , questions}) => {
   const totalPages = Math.ceil(questions.length / questionsPerPage);
 
   const handlePageClick = (page) => {
@@ -20,11 +19,6 @@ const Pagination = ({ setCurrentPage, currentPage, questionsPerPage }) => {
 
   return (
     <>
-      {/* <Breadcrumb
-        currentTopic="Logical Sequence of words"
-        page={currentPage}
-        totalPages={totalPages}
-      /> */}
       <PaginationWrapper>
         <ButtonContainer>
           <button onClick={handlePrevClick} disabled={currentPage === 1}>

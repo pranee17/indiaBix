@@ -1,5 +1,5 @@
 // questions.js
-export const questions = [
+export const bloodrelationquestions = [
     {
       question: (
         <>

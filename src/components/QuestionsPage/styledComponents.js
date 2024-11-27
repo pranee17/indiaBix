@@ -34,7 +34,7 @@ export const ReportForm = styled.div`
 
   input,
   textarea {
-    width: 100%;
+    width: 95%;
     margin-bottom: 10px;
     padding: 10px;
     font-size: 16px;
@@ -61,6 +61,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   gap: 12px;
   margin-bottom: 25px;
+  margin-top:10px;
 
   button {
     padding: 12px 15px;

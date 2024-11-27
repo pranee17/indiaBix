@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; // Use Link for routing
 import { BreadcrumbNav } from "../../styles/styled-components";
 
-const Breadcrumb = ({ currentTopic, section, page, totalPages }) => {
+const Breadcrumb = ({  page, totalPages, Topic , subTopic , Topiclink , subTopiclink}) => {
   return (
     <BreadcrumbNav>
       <span>
@@ -10,24 +10,17 @@ const Breadcrumb = ({ currentTopic, section, page, totalPages }) => {
       </span>
       {" << "}
       <span>
-        <Link to="/verbal-reasoning">Verbal Reasoning</Link>
+        <Link to={Topiclink}>Verbal Reasoning</Link>
       </span>
       {" << "}
-      {!currentTopic && <span className="active">List of Topics</span>}
-      {currentTopic && (
+      {!subTopic && <span className="active">List of Topics</span>}
+      {subTopic && (
         <>
           <span>
-            <Link to={`/verbal-reasoning/${currentTopic}`}>{currentTopic}</Link>
+            <Link to={`/verbal-reasoning/${subTopic}`}>{subTopic}</Link>
           </span>
           {" << "}
-          {section && (
-            <>
-              <span>
-                <Link to={`/verbal-reasoning/${currentTopic}/${section}`}>{section}</Link>
-              </span>
-              {" << "}
-            </>
-          )}
+          
           {page && totalPages && (
             <span className="active">
               Page {page} of {totalPages}

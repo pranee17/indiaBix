@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { questions } from "../topics/LogicalSequence";
 import ButtonLogic from "./Buttons/ButtonLogic";
 import Explanation from "./Buttons/Explanation";
 import Discussion from "./Buttons/Discussion";
@@ -7,9 +6,10 @@ import Workspace from "./Buttons/WorkSpace";
 import Report from "./Buttons/Report";
 import { QuestionBox, SectionContainer } from "./styledComponents";
 import Pagination from "../QuestionsPage/Pagination";
+import Breadcrumb from "../VerbalReasoning/Breadcrumb";
 
 
-const QuestionPageLogic = () => {
+const QuestionPageLogic = ({ questions , subTopic}) => {
   const [openSections, setOpenSections] = useState({});
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showTryAgainMessage, setShowTryAgainMessage] = useState(false);
@@ -43,6 +43,7 @@ const QuestionPageLogic = () => {
   return (
     <div className="logical-sequence">
 
+  <Breadcrumb currentTopic="Verbal Reasoning" page={currentPage} totalPages={ Math.ceil(questions.length / questionsPerPage)}  subTopic={subTopic}/>
 
       {getCurrentPageQuestions().map((question, index) => (
         <QuestionBox key={index}>
@@ -129,6 +130,7 @@ const QuestionPageLogic = () => {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         questionsPerPage={questionsPerPage}
+        questions={questions}
       />
     </div>
   );
