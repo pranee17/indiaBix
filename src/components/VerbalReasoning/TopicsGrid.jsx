@@ -13,7 +13,6 @@ const TopicsGrid = ({ topics }) => {
       "Series Completion": "/series-completion",
       "Cause and Effect": "/cause-and-effect",
       "Dice":"/dice",
-      "Venn Diagram":"/venn-diagram",
       "Cube and Cuboid":"/cube-and-cuboid",
       "Analogy":"/analogy",
       "Seating Arrangement":"/seating-arrangement",
@@ -23,11 +22,11 @@ const TopicsGrid = ({ topics }) => {
       "Data Sufficiency":"/data-sufficiency",
       "Arithmetic Reasoning":"/arithmetic-reasoning",
       "Verification of Truth":"/verification-of-truth",
+      "Venn Diagrams":"/venn-diagrams",
+      
     };
- 
     const route = topicRoutes[topic];
     if (route) {
-      console.log(route);
       navigate(route);
     } else {
       alert(`No page is defined for the topic: ${topic}`);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Use Link for routing
+import { Link } from "react-router-dom"; 
 import { BreadcrumbNav } from "../../styles/styled-components";
 
 const Breadcrumb = ({  page, totalPages, Topic , subTopic , Topiclink , subTopiclink}) => {

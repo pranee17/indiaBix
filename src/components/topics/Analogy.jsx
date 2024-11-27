@@ -1,4 +1,3 @@
-// questions.js
 export const analogyquestions = [
     {
       question: (

@@ -20,8 +20,11 @@ function App() {
           <Route
             path="/logical-sequence"
             element={
-              <> 
-                <QuestionPageLogic questions={logicalquestions} subTopic={"Logical Sequence of Words"}  />
+              <>
+                <QuestionPageLogic
+                  questions={logicalquestions}
+                  subTopic={"Logical Sequence of Words"}
+                />
               </>
             }
           />
@@ -29,18 +32,22 @@ function App() {
             path="/blood-relation-test"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Blood Relation Test"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Blood Relation Test"}
+                />
               </>
             }
           />
-    
+
           <Route
             path="/syllogism"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Syllogism"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Syllogism"}
+                />
               </>
             }
           />
@@ -48,8 +55,10 @@ function App() {
             path="/series-completion"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Series Completion"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Series Completion"}
+                />
               </>
             }
           />
@@ -57,8 +66,10 @@ function App() {
             path="/cause-and-effect"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Cause And Effect"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Cause And Effect"}
+                />
               </>
             }
           />
@@ -66,17 +77,10 @@ function App() {
             path="/dice"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Dice"} />
-              </>
-            }
-          />
-          <Route
-            path="/venn-diagram"
-            element={
-              <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Venn Diagram"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Dice"}
+                />
               </>
             }
           />
@@ -84,8 +88,21 @@ function App() {
             path="/cube-and-cuboid"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Cube And Cuboid"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Cube And Cuboid"}
+                />
+              </>
+            }
+          />
+          <Route
+            path="/venn-diagrams"
+            element={
+              <>
+                <QuestionPageLogic
+                  questions={analogyquestions}
+                  subTopic={"Venn Diagram"}
+                />
               </>
             }
           />
@@ -93,8 +110,10 @@ function App() {
             path="/analogy"
             element={
               <>
-             
-                <QuestionPageLogic questions={analogyquestions} subTopic={"Analogy"} />
+                <QuestionPageLogic
+                  questions={analogyquestions}
+                  subTopic={"Analogy"}
+                />
               </>
             }
           />
@@ -102,8 +121,10 @@ function App() {
             path="/seating-arrangement"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Seating-Arrangement"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Seating-Arrangement"}
+                />
               </>
             }
           />
@@ -111,8 +132,10 @@ function App() {
             path="/character-puzzles"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Character Puzzles"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Character Puzzles"}
+                />
               </>
             }
           />
@@ -120,8 +143,10 @@ function App() {
             path="/direction-sense-test"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Direction Sense Test"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Direction Sense Test"}
+                />
               </>
             }
           />
@@ -129,8 +154,10 @@ function App() {
             path="/classification"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Classification"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Classification"}
+                />
               </>
             }
           />
@@ -138,8 +165,10 @@ function App() {
             path="/data-sufficiency"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Data Sufficiency"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Data Sufficiency"}
+                />
               </>
             }
           />
@@ -147,8 +176,10 @@ function App() {
             path="/arithmetic-reasoning"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Arithmetic Reasoning"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Arithmetic Reasoning"}
+                />
               </>
             }
           />
@@ -156,12 +187,14 @@ function App() {
             path="/verification-of-truth"
             element={
               <>
-             
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Verification Of Truth"} />
+                <QuestionPageLogic
+                  questions={bloodrelationquestions}
+                  subTopic={"Verification Of Truth"}
+                />
               </>
             }
           />
-              </Routes>
+        </Routes>
         <Footer />
       </MainComponent>
     </Router>
