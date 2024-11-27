@@ -61,7 +61,7 @@ export const TopicItem = styled.div`
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #fff5e1;
+  background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
@@ -83,7 +83,7 @@ export const MainComponent = styled.div`
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: #f7f8fa;
+  background-color: #ffffff;
   color: #333;
   font-family: Arial, sans-serif;
 
@@ -136,7 +136,7 @@ export const BreadcrumbNav = styled.nav`
   background-color: white;
   padding: 10px 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
   max-width: 60%;
   display: flex;
   justify-content: center;

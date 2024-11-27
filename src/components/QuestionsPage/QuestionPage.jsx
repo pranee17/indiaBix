@@ -8,6 +8,7 @@ import Report from "./Buttons/Report";
 import { QuestionBox, SectionContainer } from "./styledComponents";
 import Pagination from "../QuestionsPage/Pagination";
 
+
 const QuestionPageLogic = () => {
   const [openSections, setOpenSections] = useState({});
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -41,7 +42,7 @@ const QuestionPageLogic = () => {
 
   return (
     <div className="logical-sequence">
-      <h2>Logical Sequence of Words</h2>
+
 
       {getCurrentPageQuestions().map((question, index) => (
         <QuestionBox key={index}>

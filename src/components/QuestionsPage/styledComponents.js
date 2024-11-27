@@ -59,20 +59,20 @@ export const ReportForm = styled.div`
 
 export const ButtonContainer = styled.div`
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 25px;
 
   button {
-    padding: 10px 15px;
+    padding: 12px 15px;
     font-size: 14px;
-    border: none;
+    border: 1px solid  #008631;
     border-radius: 5px;
-    background: #007bff;
-    color: white;
+    background: white;
+    color: black;   
     cursor: pointer;
 
     &:hover {
-      background: #0056b3;
+      background: #cccccc;
     }
   }
 `;
@@ -96,7 +96,7 @@ export const PaginationWrapper = styled.div`
     visibility: visible;
 
     &.active {
-      background: #007bff;
+      background: #008631;
       color: #fff;
       font-weight: bold;
     }
@@ -108,7 +108,7 @@ export const PaginationWrapper = styled.div`
     }
 
     &:hover {
-      background: #007bff;
+      background: #abf7b1;
       color: #fff;
     }
   }
@@ -118,7 +118,7 @@ export const SectionContainer = styled.div`
   margin: 20px 0;
   padding: 20px;
   background: #f7f8fa;
-  border: 1px solid #ddd;
+ border: 1px solid #ddd;
   border-radius: 5px;
 `;
 
@@ -135,7 +135,7 @@ export const QuestionBox = styled.div`
 
     li {
       padding: 10px;
-      border: 1px solid #ccc;
+      
       margin-bottom: 5px;
       border-radius: 5px;
       cursor: pointer;
@@ -154,7 +154,7 @@ export const QuestionBox = styled.div`
 
 export const ExplanationSection = styled.div`
   margin-top: 10px;
-  padding: 10px;
+  padding: 17px;
   background: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 5px;

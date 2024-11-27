@@ -23,6 +23,16 @@ function App() {
               </>
             }
           />
+          <Route
+            path="//blood-relation-test"
+            element={
+              <>
+              <Breadcrumb/>
+                <QuestionPageLogic />
+              </>
+            }
+          />
+
         </Routes>
         <Footer />
       </MainComponent>
