@@ -9,6 +9,7 @@ import QuestionPageLogic from "./components/QuestionsPage/QuestionPage";
 import Breadcrumb from "./components/VerbalReasoning/Breadcrumb";
 import { bloodrelationquestions } from "./components/topics/BloodRelation";
 import { logicalquestions } from "./components/topics/LogicalSequence";
+import { analogyquestions } from "./components/topics/Analogy";
 function App() {
   return (
     <Router>
@@ -93,7 +94,7 @@ function App() {
             element={
               <>
              
-                <QuestionPageLogic questions={bloodrelationquestions} subTopic={"Analogy"} />
+                <QuestionPageLogic questions={analogyquestions} subTopic={"Analogy"} />
               </>
             }
           />

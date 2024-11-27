@@ -7,7 +7,7 @@ export const DiscussionStyle = styled.div`
    padding:10px;
   .comment {
     margin-bottom: 10px;
-    border-bottom: 1px solid #eee;
+    
   }
 `;
 
