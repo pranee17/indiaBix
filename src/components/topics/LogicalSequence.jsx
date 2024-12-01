@@ -176,6 +176,4 @@ export const logicalquestions = [
       ]
     },
   
-  
-    // Add more questions as needed
   ];

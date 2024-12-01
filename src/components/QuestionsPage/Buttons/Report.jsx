@@ -1,59 +1,53 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 import { ReportForm } from '../styledComponents';
 
 const Report = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    comments: '',
-  });
+  const {
+    register, 
+    handleSubmit, 
+    formState: { errors } 
+  } = useForm();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
+  const onSubmit = (data) => {
+    console.log(data);
     alert("Form submitted!");
   };
 
   return (
     <ReportForm>
       <h3>Report</h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="name">Name:</label>
-          <input 
-            type="text" 
-            name="name" 
-            id="name" 
-            value={formData.name} 
-            onChange={handleChange} 
-            required 
+          <input
+            type="text"
+            {...register("name", { required: "Name is required" })}
           />
+          {errors.name && <p style={{ color: 'red' }}>{errors.name.message}</p>}
         </div>
         <div>
           <label htmlFor="email">Email:</label>
-          <input 
-            type="email" 
-            name="email" 
-            id="email" 
-            value={formData.email} 
-            onChange={handleChange} 
-            required 
+          <input
+            type="email"
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                message: "Invalid email format",
+              },
+            })}
           />
+          {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
         </div>
         <div>
           <label htmlFor="comments">Comments:</label>
-          <textarea 
-            name="comments" 
-            id="comments" 
-            value={formData.comments} 
-            onChange={handleChange} 
-            required 
+          <textarea
+            {...register("comments", { required: "Comments are required" })}
           />
+          {errors.comments && (
+            <p style={{ color: 'red' }}>{errors.comments.message}</p>
+          )}
         </div>
         <button type="submit">Submit</button>
       </form>
